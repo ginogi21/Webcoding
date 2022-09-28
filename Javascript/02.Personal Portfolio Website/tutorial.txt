@@ -1,0 +1,11 @@
+https://youtu.be/5-_2z-DdWng
+
+https://github.com/bedimcode
+
+
+※ 참고 싸이트
+- slider를 만들때 : https://swiperjs.com/
+
+- Test 이메일을 보낼때 : https://www.emailjs.com/
+
+-SCROLL REVEAL ANIMATION : https://scrollrevealjs.org/
