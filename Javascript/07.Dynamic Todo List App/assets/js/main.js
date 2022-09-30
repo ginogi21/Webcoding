@@ -1,0 +1,64 @@
+const inputTodo = document.querySelector('.input-todo textarea');
+const todoLists = document.querySelector('.todoLists');
+const pendingNum = document.querySelector('.pending-num');
+const clearButton = document.querySelector('.clear-button');
+const pendingTask = document.querySelector('span')
+
+
+// 4. we will call this function while adding, deleting and checking-unchecking the task
+function allTasks(){
+  let tasks = document.querySelectorAll('.pending');
+  
+  //if tasks' length is 0 then pending num text content will be no, if not then pending num value will be task's length
+  pendingNum.textContent = tasks.length === 0 ? "no" : tasks.length;
+
+  let allLists = document.querySelectorAll('.list');
+  if(allLists.length > 0){
+    todoLists.style.marginTop = "20px";
+    clearButton.style.pointerEvents = "auto";
+    pendingTask.style.color = "#413d3d";
+    pendingNum.style.color = "blue";
+    return;
+  }
+  todoLists.style.marginTop = "0px";
+  clearButton.style.pointerEvents = "none";
+  pendingTask.style.color = "#ccc";
+  pendingNum.style.color = "#ccc";
+}
+
+// 1. add task while we put value in text area and press enter
+inputTodo.addEventListener('keyup',(e)=>{
+  let inputVal = inputTodo.value.trim();
+  
+  if(e.key === "Enter" && inputVal.length > 0){
+    let liTag =`<li class="list pending" onclick="handleStatus(this)">
+                  <input type="checkbox">
+                  <span class="task">${inputVal}</span>
+                  <i class="fas fa-trash" onclick="deleteTask(this)"></i>
+                </li>`;
+
+    todoLists.insertAdjacentHTML('beforeend', liTag); //inserting li tag inside the todolist div
+    inputTodo.value= ""; //removing value from input field
+    allTasks();
+  }
+});
+
+// 2. checking and unchecking the chekbox while we click on the task
+function handleStatus(e){
+  const checkbox = e.querySelector('input');
+  checkbox.checked = checkbox.checked ? false : true;
+  e.classList.toggle('pending');
+  allTasks();
+}
+
+// 3. deleting task while we click on the delete icon.
+function deleteTask(e){
+  e.parentElement.remove();
+  allTasks();
+}
+
+// 5. deleting all the tasks while we click on the clear button.
+clearButton.addEventListener('click',()=>{
+  todoLists.innerHTML = "";
+  allTasks();
+});
