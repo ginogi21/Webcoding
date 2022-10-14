@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('reset.css');
+
+:root{
+  --btn-size:10rem;
+  --sun-size: calc(var(--btn-size) / 2);
+  --sun-light1: calc(var(--btn-size) * 0.75);
+  --sun-light2: calc(var(--btn-size) * 0.65);
+  --bg-color:#e91e63;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #4e65ff, #92effd);
+}
+
+.button-box{
+  width: var(--btn-size);
+  height: var(--btn-size);
+  background:var(--bg-color);
+  border-radius: 6px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.sun{
+  width: var(--sun-size);
+  height: var(--sun-size);
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: relative;
+  border: 5px solid var(--bg-color);
+}
+
+.sun div{
+  height: 3px;
+  background: #fff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  transition: all 0.5s;
+}
+
+.sun .line1{
+  width:var(--sun-light1);
+  transform: translate(-50%, -50%);
+}
+
+.sun .line2{
+  width: var(--sun-light1);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.sun .line3{
+  width: var(--sun-light2);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sun .line4{
+  width: var(--sun-light2);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.sun::after{
+  content: '';
+  width: var(--sun-size);
+  height: var(--sun-size);
+  background:var(--bg-color);
+  border-radius: 50%;
+  position: absolute;
+  top:calc(var(--btn-size) * (-0.5));
+  right:calc(var(--btn-size) * (-0.5));
+  transition: 0.5s;
+}
+
+.sun.night::after{
+  top:calc(var(--btn-size) * (-0.16));
+  right:calc(var(--btn-size) * (-0.16));
+}
+
+.sun.night div{
+  width: 0;
+}
+
