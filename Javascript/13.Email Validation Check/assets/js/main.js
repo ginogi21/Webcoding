@@ -3,7 +3,7 @@ let text = document.  querySelector('#text');
 let email = document.querySelector('#email');
 
 function validate(){
-  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
   if(email.value.match(pattern)){
     form.classList.add('valid');
