@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('reset.css');
+
+:root{
+  --body-color:#cdcdcd;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
+  --primary-color:#edf2fc;
+  --secondary-color:#212121;
+}
+
+body{
+  background: var(--secondary-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.list li a{
+  position: relative;
+  display: flex;
+  font-size: 6em;
+  line-height: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.list li a span{
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.list li a span .out{
+  display: inline-flex;
+}
+
+.list li a:hover span .out{
+  transform: translateY(-100%);
+}
+
+.list li a span .in{
+  position: absolute;
+  left: 0;
+  color: #2aa1ff;
+  transform: translateY(100%);
+}
+
+.list li a:hover span .in{
+  transform: translateY(0);
+}
