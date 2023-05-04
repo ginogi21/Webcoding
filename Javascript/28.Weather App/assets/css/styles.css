@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('reset.css');
+
+:root{
+  --body-color:#cdcdcd;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
+  --primary-color:#edf2fc;
+  --secondary-color:#212121;
+}
+
+body{
+  background: var(--body-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  max-width: 800px;
+  min-width: 510px;
+  padding: 40px 0;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+form{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+form #city-input{
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex: 2;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: 0;
+}
+
+form input:nth-child(2){
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: #1876f2;
+  color: #fff;
+  flex: 1;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input:nth-child(2):hover{
+  background: #032e65;
+}
+
+#weather-data{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather-data .text, #weather-data .details{
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+
+#weather-data .icon img{
+  width: 80px;
+}
+
+#weather-data .text{
+  width: 90%;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#weather-data .details{
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
