@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Cursor on Hover</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+  <section>
+    <div class="blobs">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(238, 205, 163);"></stop>
+            <stop offset="100%" style="stop-color: rgb(239, 98, 159);"></stop>
+          </linearGradient>
+        </defs>
+        <path fill="url(#gradient)">
+          <animate attributeName="d"
+            dur="10000ms"
+            repeatCount="indefinite"
+            
+            values="M377.5,294Q355,338,316,371.5Q277,405,212.5,416Q148,427,128,364.5Q108,302,62,233.5Q16,165,89.5,131.5Q163,98,227,56.5Q291,15,319.5,91.5Q348,168,374,209Q400,250,377.5,294Z;
+            
+            M456.5,324Q427,398,359.5,443.5Q292,489,227,445.5Q162,402,103,363.5Q44,325,64,257.5Q84,190,114,128.5Q144,67,217.5,42.5Q291,18,328.5,85Q366,152,426,201Q486,250,456.5,324Z;
+            
+            M429.5,296.5Q360,343,323.5,400Q287,457,222.5,433.5Q158,410,88.5,372Q19,334,69,268Q119,202,139.5,148Q160,94,216.5,105.5Q273,117,313.5,139.5Q354,162,426.5,206Q499,250,429.5,296.5Z;
+            
+            M400,316Q407,382,343,397.5Q279,413,209.5,427Q140,441,122.5,372Q105,303,115,253.5Q125,204,126.5,121.5Q128,39,200.5,79Q273,119,320.5,135Q368,151,380.5,200.5Q393,250,400,316Z;
+            
+            M377.5,294Q355,338,316,371.5Q277,405,212.5,416Q148,427,128,364.5Q108,302,62,233.5Q16,165,89.5,131.5Q163,98,227,56.5Q291,15,319.5,91.5Q348,168,374,209Q400,250,377.5,294Z;          
+            ">
+        </animate>
+        </path>
+      </svg>
+    </div>
+    <div class="blobs">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(238, 205, 163);"></stop>
+            <stop offset="100%" style="stop-color: rgb(239, 98, 159);"></stop>
+          </linearGradient>
+        </defs>
+        <path fill="url(#gradient)">
+          <animate attributeName="d"
+            dur="10000ms"
+            repeatCount="indefinite"
+            
+            values="M377.5,294Q355,338,316,371.5Q277,405,212.5,416Q148,427,128,364.5Q108,302,62,233.5Q16,165,89.5,131.5Q163,98,227,56.5Q291,15,319.5,91.5Q348,168,374,209Q400,250,377.5,294Z;
+            
+            M456.5,324Q427,398,359.5,443.5Q292,489,227,445.5Q162,402,103,363.5Q44,325,64,257.5Q84,190,114,128.5Q144,67,217.5,42.5Q291,18,328.5,85Q366,152,426,201Q486,250,456.5,324Z;
+            
+            M429.5,296.5Q360,343,323.5,400Q287,457,222.5,433.5Q158,410,88.5,372Q19,334,69,268Q119,202,139.5,148Q160,94,216.5,105.5Q273,117,313.5,139.5Q354,162,426.5,206Q499,250,429.5,296.5Z;
+            
+            M400,316Q407,382,343,397.5Q279,413,209.5,427Q140,441,122.5,372Q105,303,115,253.5Q125,204,126.5,121.5Q128,39,200.5,79Q273,119,320.5,135Q368,151,380.5,200.5Q393,250,400,316Z;
+            
+            M377.5,294Q355,338,316,371.5Q277,405,212.5,416Q148,427,128,364.5Q108,302,62,233.5Q16,165,89.5,131.5Q163,98,227,56.5Q291,15,319.5,91.5Q348,168,374,209Q400,250,377.5,294Z;          
+            ">
+        </animate>
+        </path>
+      </svg>
+    </div>
+  </section>
+</body>
+</html>
