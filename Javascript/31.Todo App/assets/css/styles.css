@@ -13,9 +13,9 @@
   --color-text-muted:#a4d0e3;
   --color-input:#082937;
   --color-input-lighter:#0b374a;
-  --color-secodary:#ff8c42;
-  --color-secodary-darker:#cc7035;
-  --color-secodary-lighter:#ffa368;
+  --color-secondary:#ff8c42;
+  --color-secondary-darker:#cc7035;
+  --color-secondary-lighter:#ffa368;
   --color-tertiary:#1c89b8;
   --color-text-badge:#e8f3f8;
   --color-disabled:#d2e7f1;
@@ -74,7 +74,7 @@ form input{
 }
 
 form button{
-  background-color: var(--color-secodary);
+  background-color: var(--color-secondary);
   transition: var(--global-transition);
   text-transform: uppercase;
   font-weight: 700;
@@ -82,7 +82,7 @@ form button{
 }
 
 form button:hover{
-  background-color: var(--color-secodary-darker);
+  background-color: var(--color-secondary-darker);
 }
 
 
@@ -178,7 +178,7 @@ input[type="checkbox"]:checked{
 }
 
 .todos li button i:hover{
-  color: var(--color-secodary-darker);
+  color: var(--color-secondary-darker);
 }
 
 /* Footer */
