@@ -31,12 +31,13 @@ nav li{
 
 nav li:first-child{
   animation-name: nav-first-link-load;
-  tansform: translateX(-1000%);
+  transform: translateX(-1000%);
 }
 
 nav li:last-child{
   animation-name: nav-last-link-load;
-  tansform: translateX(1000%);
+  transform: translateX(1000%);
+
 }
 
 nav li:hover{
