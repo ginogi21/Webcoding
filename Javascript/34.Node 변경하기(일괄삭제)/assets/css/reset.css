@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ol,
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* || VARIABLES */
+:root {
+  /* FONT */
+  --FF: "Kanit", sans-serif;
+  --FS: 1.5rem;
+  --FS-XL: 3rem;
+
+  /* COLOR */
+  --BGCOLOR: #475569;
+  --ALT-BGCOLOR: #1E293B;
+  --RADIAL-COLOR: whitesmoke;
+  --LIGHT-COLOR: whitesmoke;
+  --DARK-COLOR: #000;
+
+  /* SQUARE */
+  --SQUARE-BGCOLOR: papayawhip;
+  --SQUARE-SIZE: max(150px, 20vw);
+
+  /* GENERAL */
+  --PADDING: 0.5rem;
+  --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+  --BORDERS: 2px solid var(--DARK-COLOR);
+}
