@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* @import url(./reset.css); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#1d5566, #0d3949);
+}
+
+.circle {
+  position: absolute;
+  width: 480px;
+  height: 120px;
+}
+
+.circle::before,
+.circle::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(179, 170, 170);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%), inset 20px 20px 20px rgb(255 255 255 / 68%), inset -20px -20px 20px rgb(0 0 0 / 35%);
+}
+.circle::before {
+  top: -50px;
+  left: -40px;
+}
+.circle::after {
+  bottom: -50px;
+  right: -60px;
+}
+
+.menu {
+  position: relative;
+  width: 480px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+
+.menu li {
+  width: 120px;
+  height: 120px;
+  list-style: none;
+}
+
+.menu li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: border-image .3s;
+}
+
+.menu li.active a {
+  border-image: linear-gradient(
+      rgba( 255, 255, 255, 0.2), 
+      transparent
+    ) 1 1%;
+}
+
+.menu li ion-icon {
+  font-size: 3em;
+  filter: blur(4px);
+  transition: all .3s;
+}
+.menu li ion-icon[name=home] {
+  color: #49d5ff;
+}
+.menu li ion-icon[name=people] {
+  color: #f678a7;
+}
+.menu li ion-icon[name=chatbubbles] {
+  color: #fff;
+}
+.menu li ion-icon[name=camera] {
+  color: #e64072;
+}
+
+.menu li.active ion-icon[name=home] {
+  filter: blur(0) drop-shadow(0px 0px 16px #49d5ff);
+}
+.menu li.active ion-icon[name=people] {
+  filter: blur(0) drop-shadow(0px 0px 16px #f678a7);
+}
+.menu li.active ion-icon[name=chatbubbles] {
+  filter: blur(0) drop-shadow(0px 0px 16px #fff);
+}
+.menu li.active ion-icon[name=camera] {
+  filter: blur(0) drop-shadow(0px 0px 16px #e64072);
+}
