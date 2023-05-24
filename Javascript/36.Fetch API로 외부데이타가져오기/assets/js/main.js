@@ -26,7 +26,11 @@ function ajax(){
       return resp.json();
     }
   }).then(function(jsondata){
-    let data = jsondata.data.movies
+    let data = jsondata.data.movies;
+
+    let movieList = document.querySelector('.movieList');
+    let tag = "";
+
     data.forEach((e,i) => {
       let title = data[i].title;
       let year = data[i].year;
@@ -34,7 +38,21 @@ function ajax(){
       let summary = data[i].summary;
       let genres = data[i].genres;
 
+      tag += `<div class="movie">`;
+      tag += `<img src="${img}">`;
+      tag += `<div class="inner">`;
+      tag += `<h3 class="title">◆ Title: ${title}</h3>`;
+      tag += `<h3 class="year">◆ Open: ${year}</h3>`;
+      tag += `<ul class="genres">`;
+              for(let k in genres){
+                tag += `<li>✅${genres[k]}</li>`;
+              }
+      tag += `</ul>`;
+      tag += `<p class="summary"><b>※ Content:</b> ${summary}</p>`;
+      tag += `</div>`;
+      tag += `</div>`;
     });
+    movieList.innerHTML = tag;
   })
 }
 

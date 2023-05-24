@@ -6,34 +6,50 @@
 
 @import url(./reset.css);
 
-:root{
-  /* Background Color */
-  --Bgcolor01:radial-gradient(#1d5566, #0d3949);
-  --Bgcolor02:radial-gradient(#6d66c0, #020c42);
-  /* Font Family */
-  --F-Poppins:'Poppins', sans-serif;
-  --F-Kanit:'Kanit', sans-serif;
-  --F-Figtree:'Figtree', sans-serif;
-  --F-NotosansKr:'Noto Sans KR', sans-serif;
-  --FS:1.5rem;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--F-NotosansKr);
+  font-family:'Poppins', sans-serif;
 }
 
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--Bgcolor01);
+  background: #ccc;
 }
 
-h1{
-  color: #fff;
-  font-size: 5rem;
+.mainTitle{
+  text-align: center;
+  margin: 20px 0;
+}
+.mainTitle h3{
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family:'Kanit', sans-serif;
+}
+
+.movieList{
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.movie{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #fff;
+}
+
+.movie img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.inner p{
+  padding: 10px;
 }
