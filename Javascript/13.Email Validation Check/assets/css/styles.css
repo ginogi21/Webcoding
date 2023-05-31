@@ -38,6 +38,7 @@ body{
 }
 .box .inputBox{
   position: relative;
+  width: 300px;
 }
 #text{
   display: block;

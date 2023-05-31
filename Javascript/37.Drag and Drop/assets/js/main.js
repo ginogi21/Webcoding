@@ -12,7 +12,7 @@ lists.forEach((list)=>{
 
     rightBox.addEventListener('drop',(e)=>{
       rightBox.appendChild(selected);
-      selected = undefined;
+      selected = null;
     })
 
     
@@ -22,7 +22,7 @@ lists.forEach((list)=>{
 
     leftBox.addEventListener('drop',(e)=>{
       leftBox.appendChild(selected);
-      selected = undefined;
+      selected = null;
     })
     
   })
