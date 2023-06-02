@@ -135,6 +135,15 @@ form button:hover{
   border-radius: 10px;
 }
 
+.wrapper.success .container h1{
+  transform: translateY(85px);
+}
+
+.wrapper.success form{
+  transform: translateY(250px);
+  visibility: hidden;
+}
+
 @keyframes square{
   0%{
     transform: translate(0);
