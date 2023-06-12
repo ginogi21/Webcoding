@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* @import url(./reset.css); */
+
+:root{
+  /* Background Color */
+  --Bgcolor01:radial-gradient(#1d5566, #0d3949);
+  --Bgcolor02:radial-gradient(#6d66c0, #020c42);
+  /* Font Family */
+  --F-Poppins:'Poppins', sans-serif;
+  --F-Kanit:'Kanit', sans-serif;
+  --F-Figtree:'Figtree', sans-serif;
+  --F-NotosansKr:'Noto Sans KR', sans-serif;
+  --FS:1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--F-Poppins);
+}
+
+body{
+  min-height: 100vh;
+  background:var(--Bgcolor01);
+  display: grid;
+  place-items: center;
+  font-size: 100px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 2em;
+  height: 0.8em;
+  border-radius: 0.4em;
+  background: rgb(255 255 255 / .2);
+  overflow: hidden;
+  position: relative;
+}
+.container :is(.minus, .plus){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 0.6em;
+}
+.container :is(.minus, .plus)::after,
+.container .plus::before{
+  content: "";
+  width: 0.25em;
+  height: 0.04em;
+  border-radius: 0.02em;
+  background: rgb(255 255 255);
+}
+.container .plus::after{
+  position: absolute;
+  rotate: 90deg;
+}
+.container .counter-container{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.container .counter-container .counter{
+  display: grid;
+  place-items: center;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.container .counter-container .counter p{
+  font-size: 0.3em;
+}
