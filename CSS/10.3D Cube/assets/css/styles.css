@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url(./reset.css);
+
+:root{
+  /* Background Color */
+  --Bgcolor01:radial-gradient(#1d5566, #0d3949);
+  --Bgcolor02:radial-gradient(#6d66c0, #020c42);
+  /* Font Family */
+  --F-Poppins:'Poppins', sans-serif;
+  --F-Kanit:'Kanit', sans-serif;
+  --F-Figtree:'Figtree', sans-serif;
+  --F-NotosansKr:'Noto Sans KR', sans-serif;
+  --FS:1.5rem;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--F-Poppins);
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Bgcolor01);
+} */
+
+
+:root {
+  --size: 300px;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 80vh;
+}
+
+/* container */
+.container {
+  margin-top: 50px;
+  perspective: 1000px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(15deg);
+  transition: all 0.85s cubic-bezier(1, -0.75, 0.5, 1.2);
+  /* turn the cube  */
+  /* transform: rotateX(90deg); */
+  /* transform: rotateY(90deg); */
+}
+
+/* Faces */
+.face {
+  position: absolute;
+  border: 1px solid rgba(142, 142, 142, 0.683);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.front {
+  transform: translateZ(150px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+/* Interactions */
+#bottom:checked ~ .container .cube {
+  transform: rotateX(90deg);
+}
+
+#top:checked ~ .container .cube {
+  transform: rotateX(-90deg);
+}
+
+#left:checked ~ .container .cube {
+  transform: rotateY(90deg);
+}
+
+#right:checked ~ .container .cube {
+  transform: rotateY(-90deg);
+}
+
+#back:checked ~ .container .cube {
+  transform: rotateY(180deg);
+}
+
+/* Buttons */
+input[type="radio"] {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #4caf50;
+}
