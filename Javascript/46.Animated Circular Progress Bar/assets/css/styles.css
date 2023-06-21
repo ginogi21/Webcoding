@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url(./reset.css);
+
+:root{
+  /* Background Color */
+  --Bgcolor01:radial-gradient(#1d5566, #0d3949);
+  --Bgcolor02:radial-gradient(#6d66c0, #020c42);
+  /* Font Family */
+  --F-Poppins:'Poppins', sans-serif;
+  --F-Kanit:'Kanit', sans-serif;
+  --F-Figtree:'Figtree', sans-serif;
+  --F-NotosansKr:'Noto Sans KR', sans-serif;
+  --FS:1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--F-Poppins);
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Bgcolor01);
+}
+.card{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.card .rating{
+  position: relative;
+  width: 100%;
+  height: 100%;
+/*   background: #f00; */
+}
+.card .rating .block{
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: #000;
+  left: 50%;  
+  transform-origin: 50% 100px;
+  opacity: 0;
+  animation: animate 0.1s linear forwards;
+}
+@keyframes animate{
+  to{
+    opacity: 1;
+  }
+}
+
+/* Get + 1 value up of given data */
+.card .rating .block:nth-child(-n+91){
+  background: #0f0;
+  box-shadow: 0 0 15px #0f0, 0 0 30px #0f0;
+}
+
+.card .rating h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.card .rating h2 span{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.card .rating h2 sub{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
