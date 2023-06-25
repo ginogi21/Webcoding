@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url(./reset.css);
+
+:root{
+  /* Background Color */
+  --Bgcolor01:radial-gradient(#1d5566, #0d3949);
+  --Bgcolor02:radial-gradient(#6d66c0, #020c42);
+  /* Font Family */
+  --F-Poppins:'Poppins', sans-serif;
+  --F-Kanit:'Kanit', sans-serif;
+  --F-Figtree:'Figtree', sans-serif;
+  --F-NotosansKr:'Noto Sans KR', sans-serif;
+  --FS:1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--F-Poppins);
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Bgcolor01);
+}
+.box{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 20px;
+}
+.box::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+.box::after{
+  content: '';
+  position: absolute;
+  background: var(--Bgcolor01);
+  inset: 4px;
+  border-radius: 16px; /* .box의 border-radius 20px에서 inset 4px를 뺀값 */
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.box h2{
+  position: relative;
+  color: #fff;
+  font-size: 10em;
+  z-index: 10;
+}
