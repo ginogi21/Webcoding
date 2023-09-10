@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #0f222f;
+}
+
+.container{
+  width: 800px;
+  height: 600px;
+  border: 2px solid white;
+  position: relative;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  perspective-origin:center top;
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+  transition: 0.5s;
+  position: absolute;
+}
+
+#box1{
+  background: rgba(255, 255, 0, 0.8);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) rotateY(45deg);
+}
+
+#box1:hover{
+  transform: translate(-50%,-50%) rotateY(0deg);
+}
+
+#box2{
+  background: rgba(255, 192, 203, 0.8);  
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) rotateY(-45deg);
+}
+
+#box2:hover{
+  transform: translate(-50%,-50%) rotateY(0deg);
+}
