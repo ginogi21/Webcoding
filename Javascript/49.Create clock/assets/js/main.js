@@ -28,7 +28,7 @@ setInterval(()=>{
   minute.innerHTML = m;
   seconds.innerHTML = s;
   ampm.innerHTML = am;
-  hr.style.transform = `rotateZ(${h * 30}deg)`;
+  hr.style.transform = `rotateZ(${h * 30 + m / 2}deg)`;
   mn.style.transform = `rotateZ(${m * 6}deg)`;
   sc.style.transform = `rotateZ(${s * 6}deg)`;
 
