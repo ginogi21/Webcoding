@@ -27,7 +27,8 @@ prevBtn.addEventListener('click', ()=>{
   liNumeber--;  
 
   if(liNumeber < 0 ){
-    liNumeber = numLi -1 ;
+    liNumeber = numLi - 1 ;
+
   }
   liElement[liNumeber].classList.add('active');
 })
