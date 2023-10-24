@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+  --clr:#2c363f;
+}
+
+body{
+  background: var(--clr);
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #2196f3;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo{
+  position: relative;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header nav{
+  display: flex;
+  gap: 10px;
+}
+
+header nav a{
+  position: relative;
+  text-decoration: none;
+  padding: 12px 20px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+header nav #indicator{
+  position: absolute;
+  width: 88px;
+  height: 58px;
+  background: var(--clr);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: 0.5s;
+}
+
+header nav #indicator::before{
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px var(--clr);
+}
+
+header nav #indicator::after{
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-bottom-left-radius: 20px;
+  box-shadow: -5px 5px 0 5px var(--clr);
+}
