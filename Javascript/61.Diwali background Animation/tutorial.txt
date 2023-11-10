@@ -1,0 +1,5 @@
+https://youtu.be/ewN4_mcaI84
+
+bar_chart : https://apexcharts.com/docs/installation/
+
+area_chart : https://apexcharts.com/javascipt-chart-demos/mixed-charts/line-area/
