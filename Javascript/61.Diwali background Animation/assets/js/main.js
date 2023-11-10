@@ -5,10 +5,10 @@ for(let i = 1; i <= 300; i++){
   document.querySelector('.sec').appendChild(box)
 }
 
-function animatebox(){
+function animateBox(){
   let boxes = document.querySelectorAll('.box');
   let num = Math.floor(Math.random() * boxes.length);
   boxes[num].classList.toggle('animate')
 }
 
-setInterval(animatebox, 500)
+setInterval(animateBox, 500)
