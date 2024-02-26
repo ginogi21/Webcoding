@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #111;
+  overflow: hidden;
+}
+
+span{
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+span::before{
+  content: '\f005';
+  position: absolute;
+  font-family: fontAwesome;
+  color: #1ceb6b;
+  animation: moveShape 1s linear forwards;
+}
+
+@keyframes moveShape{
+  0%{
+    transform: translate(0) rotate(0deg);
+    opacity: 0;
+  }
+  20%,80%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(300) rotate(360deg);
+    opacity: 0;
+  }
+}
