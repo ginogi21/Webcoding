@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f1b26;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.spark {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transform: translate(-20px, -20px);
+}
+
+.spark span {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  pointer-events: none;
+  transform-origin: bottom;
+  overflow: hidden;
+  filter: drop-shadow(0 0 20px #0f0) drop-shadow(0 0 40px #0f0);
+}
+
+.spark span::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0f0;
+  animation: animate 0.5s ease-in-out forwards;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
