@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #333;
+  overflow: hidden;
+} */
+
+.scene{
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#a6d8ff, #fff,#fff);
+}
+
+.dark .scene{
+  background: #222833;
+}
+
+.sun{
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.dark .sun{
+  left: 65%;
+  box-shadow: 0 0 0 #fff;
+}
+
+.dark .sun::before{
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  background: #222833;
+  border-radius: 50%;
+}
+
+.bg{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 800px;
+  background: url(../img/PNG/City\ road.png);
+  background-size: 800px;
+  background-repeat: repeat-x;
+  animation: animateBg 15s linear infinite;
+}
+
+@keyframes animateBg{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 800px;
+    
+  }
+}
