@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+  overflow: hidden;
+}
+
+.text{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 200;
+  color: #fff;
+  letter-spacing: 5px;
+  display: flex;
+  gap: 10px;
+  span{
+    transition: 0.5s;
+    &.empty{
+      padding: 0 20px;
+    }
+    &:hover{
+      font-weight: 900;
+      color: rgb(36, 71, 51);
+      + span{
+        color: #3c606e;
+        font-weight: 600;
+        + span{
+          color: #47d183;
+          font-weight: 200;
+        }
+      }
+    }
+    &:has(+ span:hover){
+      color: #3c606e;
+      font-weight: 600;
+    }
+    &:has(+span +span:hover){
+      color: #47d183;
+      font-weight: 200;
+    }
+  }
+
+}
