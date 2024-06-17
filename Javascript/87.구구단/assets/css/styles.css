@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+
+:root{
+  --clr-01:#052b2f;
+  --clr-02:#073438;
+  --clr-03:#0e4b50;
+  --clr-04:#2d8f85;
+  --clr-05:#637c54;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+
+body {
+  background: var(--clr-02);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-content: center;
+  color: #fff;
+  margin-left: 20px;
+}
+
+div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+div h2{
+  text-decoration: underline;
+  color: brown;
+}
+
+div p{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
