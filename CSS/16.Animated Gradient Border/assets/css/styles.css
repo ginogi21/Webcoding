@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root{
+  --clr-01:#052b2f;
+  --clr-02:#073438;
+  --clr-03:#0e4b50;
+  --clr-04:#2d8f85;
+  --clr-05:#637c54;
+}
+
+body {
+  background: var(--clr-02);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  height: 60vh;
+  aspect-ratio: 1 / 1.5;
+  background: var(--clr-01);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-03),
+    var(--clr-04),
+    var(--clr-05),
+    var(--clr-04),
+    var(--clr-03));
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.card::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
