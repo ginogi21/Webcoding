@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+
+:root{
+  --bgc-01: linear-gradient(to bottom, #283048, #859398);
+  --bgc-02: linear-gradient(to bottom, #232526, #414345);
+  --bgc-03: linear-gradient(to bottom, #16222a, #3a6073);
+  --clr-01:#052b2f;
+  --clr-02:#073438;
+  --clr-03:#0e4b50;
+  --clr-04:#2d8f85;
+  --clr-05:#637c54;
+  --bgi-01:repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+            repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+
+body {
+  background: var(--bgc-02);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2{
+  color: #fff;
+  font-size: 8rem;
+  font-family: consolas;
+}
+
+.circle{
+  position: absolute;
+  top: 0;
+  width: 20px;
+  aspect-ratio: 1/1;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background: #0f0;
+  animation: animate 10s linear forwards;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0vh) scale(0);
+  }
+  10%{
+    transform: translateY(0vh) scale(1);
+  }
+  45%{
+    transform: translateY(0vh) scale(1);
+  }
+  55%{
+    transform: translateY(calc(100vh - 100%)) scale(1);
+  }
+  90%{
+    transform: translateY(calc(100vh - 100%)) scale(1);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: translateY(calc(100vh - 100%)) scale(0);
+    transform-origin: bottom;
+  }
+}
