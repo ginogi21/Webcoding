@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+
+:root{
+  --bgc-01: linear-gradient(to bottom, #283048, #859398);
+  --bgc-02: linear-gradient(to bottom, #232526, #414345);
+  --bgc-03: linear-gradient(to bottom, #16222a, #3a6073);
+  --clr-01:#052b2f;
+  --clr-02:#073438;
+  --clr-03:#0e4b50;
+  --clr-04:#2d8f85;
+  --clr-05:#637c54;
+  --bgi-01:repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+            repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background: rgba(0,0,0,0.1);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation{
+  border-radius: 7px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  >ul{
+    display: grid;
+    gap: 5px;
+    >li{
+      &:hover{
+        .depth2{
+          grid-template-rows: 1fr;
+        }
+      }
+      >a{
+        display: block;
+        padding: 5px 10px;
+        border-radius: 3px;
+        width: 200px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &:hover{
+          background-color: rgba(0,0,0,0.05);
+        }
+      }
+    }
+  }
+  .depth2{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.5s;
+    ul{
+      overflow: hidden;
+    }
+    a{
+      display: block;
+      padding: 5px 10px;
+      color: #000;
+      font-size: 14px;
+      border-radius: 3px;
+      &:hover{
+        color: #63ab7a;
+        background-color: rgba(134,211,158,0.2);
+      }
+    }
+  }
+}
