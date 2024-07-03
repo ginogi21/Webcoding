@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root{
+  --bg-01:linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  --bg-02:linear-gradient(to top, #2C5364, #203A43, #0F2027);
+  --bg-03:linear-gradient(to bottom, #000000, #434343);
+  --bg-04:linear-gradient(to top, #000000, #434343);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;  
+}
+
+body {
+  background:var(--bg-03);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 420px;
+  justify-content: center;
+}
+.container .box{
+  position: relative;
+  height: 160px;
+  width: 160px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+.container .box .image{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/peoples/member-1.png);
+}
+.container .box.hovered{
+  border: 2px dotted #fff;
+}
