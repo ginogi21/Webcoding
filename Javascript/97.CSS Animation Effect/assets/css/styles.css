@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root{
+  --bg-01:linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  --bg-02:linear-gradient(to top, #2C5364, #203A43, #0F2027);
+  --bg-03:linear-gradient(to bottom, #000000, #434343);
+  --bg-04:linear-gradient(to top, #000000, #434343);
+  --cl-01:#3e3d3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;  
+}
+
+body {
+  background: var(--bg-02);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  background: var(--bg-02);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: hue-rotate(70deg);
+}
+
+.loader{
+  position: relative;
+  transform: rotate(calc(45deg * var(--j)));
+}
+
+.loader span{
+  position: absolute;
+  transform: rotate(calc(18deg * var(--i)));
+
+}
+
+.loader span::before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #00ff0a;
+  border-radius: 2px;
+  animation: animate 5s linear infinite;
+  animation-delay: calc(-0.5s * var(--i));
+}
+
+.loader:nth-child(even) span::before{
+  background: #00ff0a;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateX(250px) scale(4);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-10px) scale(0);
+  }
+}
