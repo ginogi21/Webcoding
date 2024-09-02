@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root{
+  --bg-01:linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  --bg-02:linear-gradient(to top, #2C5364, #203A43, #0F2027);
+  --bg-03:linear-gradient(to bottom, #000000, #434343);
+  --bg-04:linear-gradient(to top, #000000, #434343);
+  --cl-01:#3e3d3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;  
+}
+
+/* body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-01);
+} */
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-01);
+}
+
+.wrapper{
+  position:relative;
+  display: flex;
+  width: 600px;
+  height: 180px;
+  background: #031a2b;
+  border: 1.5em solid #031a2b;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+button{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  border-radius: 100px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+span{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(239deg, #4c60dd, #d435ff);
+  border-radius: 100px;
+}
