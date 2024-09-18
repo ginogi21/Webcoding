@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root{
+  --bg-01:linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  --bg-02:linear-gradient(to top, #2C5364, #203A43, #0F2027);
+  --bg-03:linear-gradient(to bottom, #000000, #434343);
+  --bg-04:linear-gradient(to top, #000000, #434343);
+  --cl-01:#3e3d3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;  
+}
+
+body {
+  min-height: 400vh;
+/*   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-01); */
+}
+
+.container{
+  position: fixed;
+  display: flex;
+  width: 500%;
+  height: 100vh;
+  transition: 0.5s ease-out;
+}
+
+section{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #333;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h2{
+  font-size: 4em;
+  color: #333;
+}
